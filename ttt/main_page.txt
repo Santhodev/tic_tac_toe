@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Crimson+Text:400,700italic,400italic' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="base.css">
+<link rel="shortcut icon" href="http://xbmc.kestouf.com/~XBMC/addons/Files/script.game.tic.tac.toe/icon.png" type="image/png">
+<link rel="stylesheet" type="text/css" href="/home/santho/Desktop/ttt/lib/sweetalert-master/dist/sweetalert.css">
+<title>
+Tic Tac Toe
+</title>
+<script type="text/javascript" src ="popups.js"></script>
+<script src="/home/santho/Desktop/ttt/lib/sweetalert-master/dist/sweetalert.min.js"></script>
+</head>
+
+<body>
+<h1 align = "center">Tic Tac Toe </h1>
+<table align = "center">
+  <tr>
+    <td>
+	<button type="button"></button>
+    </td>
+    <td>
+	<button type="button"></button>
+    </td>
+    <td>
+	<button type="button"></button>
+    </td>
+  </tr>
+  <tr>
+    <td>
+	<button type="button"></button>
+    </td>
+    <td>
+	<button type="button"></button>
+    </td>
+    <td>
+	<button type="button"></button>
+    </td>
+  </tr>
+  <tr>
+    <td>
+	<button type="button"></button>
+    </td>
+    <td>
+	<button type="button"></button>
+    </td>
+    <td>
+	<button type="button"></button>
+    </td>
+  </tr>
+</table>
+<br>
+<br>
+<form id="rd" action="">
+<input type= "radio" name="game" value="" onclick="OX(1);">1-player game<br />
+<input type= "radio" name="game" onclick = "OX(2);">2-player game <br />
+</form>
+</body>
+</html>
