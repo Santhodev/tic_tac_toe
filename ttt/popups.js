@@ -1,12 +1,14 @@
-var user;
-var com;
-var exit = 0;
+var user; //symbol for user
+var com; //symbol for computer
+var exit = 0; // to determine if the game has completed and typer of completion(win/lose/tie)
 var i = 0;
 var sh = 0;
-var value = [5,5,5,5,5,5,5,5,5];
-var player_2 ;
-var user_2;
-var val = 0;
+var value = [5,5,5,5,5,5,5,5,5]; //initial value of all 9 squares in tic-tac-toe
+var player_2 ; //variable to define if it is 1=player game or 2-plyers game
+var user_2; //symbol for user_2
+var val = 0; //for selecting the correct player among 2 players
+
+//selcting 1-player or 2-player game
 function OX(n) {
 if (n ==1) {
 sessionStorage.setItem('player_2','0');
@@ -18,6 +20,7 @@ window.document.location.href = "radio.html";
 }
 }
 
+//selecting your symbol
 function symbol(n) {
 if (n==1) {
 user = "O";
@@ -30,9 +33,11 @@ com = "O";
 user_2 = "O";
 }
 }
+
+//actual game
 function process(n) {
 player_2 = sessionStorage.getItem('player_2');
-if (exit==0 && user && value[n]==5 && player_2==0) {
+if (exit==0 && user && value[n]==5 && player_2==0) { //1-player 
 document.getElementById(n).innerHTML =user;
 value[n] = 0;
 check(); 
@@ -41,7 +46,7 @@ if (exit == 0) put();
 draw_check();
 setTimeout("finish_1()",4500);
 }
-else if (exit==0 && user && value[n]==5 && player_2==1){
+else if (exit==0 && user && value[n]==5 && player_2==1){ //2-player
 if (val%2==0){
 document.getElementById(n).innerHTML = user;
 value[n] = 0;
@@ -62,6 +67,7 @@ setTimeout("finish_2()",4500);
 }
 }
 
+//functions to publish results
 function finish_1() {
 if (exit==1) {
 swal({   title: "YOU WON!!!",   text: "Congrats!",   type: "success",   confirmButtonText: "New game" },
@@ -103,6 +109,7 @@ function(){
 }
 }
 
+//To highlight the squares that formed the pattern
 function show(n,o,p)
 {
 	if (document.getElementById)
@@ -120,6 +127,8 @@ function hide(n,o,p)
 	document.getElementById(o).style.visibility = "hidden";
 	document.getElementById(p).style.visibility = "hidden";
 }
+
+//check for win
 function check() {
 if (((!value[0] && !value[1]) && !value[2] ==1)||((value[0]==1 && value[1]==1) && value[2] ==1)){ 
 document.getElementById(0).style.background="rgb(155,0,0)";
@@ -242,12 +251,15 @@ exit=2;
 }
 } 
 }
+
+//computer's turn 
 function display(n) {
 document.getElementById(n).innerHTML = com;
 value[n] = 1;
 check(); 
 }
-//var sel =0;
+
+//computer's play
 function put() {
 ////For winning
 if (value[0] == 1) {
@@ -393,6 +405,8 @@ if (value[i]==5) {
 }
 }
 }
+
+//check for game draw
 function draw_check() {
 if (exit==0) {
 for (var j=0; j<9; j++){
