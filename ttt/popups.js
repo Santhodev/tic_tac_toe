@@ -12,11 +12,11 @@ var val = 0; //for selecting the correct player among 2 players
 function OX(n) {
 if (n ==1) {
 sessionStorage.setItem('player_2','0');
-window.document.location.href = "radio.html";
+window.document.location.href = "https://raw.githubusercontent.com/Santhodev/tic_tac_toe/master/ttt/radio.html";
 }
 else {
 sessionStorage.setItem('player_2','1');
-window.document.location.href = "radio.html";
+window.document.location.href = "https://raw.githubusercontent.com/Santhodev/tic_tac_toe/master/ttt/radio.html";
 }
 }
 
