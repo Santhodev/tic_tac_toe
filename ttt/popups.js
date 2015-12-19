@@ -10,6 +10,7 @@ var val = 0; //for selecting the correct player among 2 players
 
 //selcting 1-player or 2-player game
 function OX(n) {
+	alert("hi");
 if (n ==1) {
 sessionStorage.setItem('player_2','0');
 window.document.location.href = "https://cdn.rawgit.com/Santhodev/tic_tac_toe/master/ttt/radio.html";
