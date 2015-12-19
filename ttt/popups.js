@@ -38,6 +38,7 @@ user_2 = "O";
 function process(n) {
 player_2 = sessionStorage.getItem('player_2');
 if (exit==0 && user && value[n]==5 && player_2==0) { //1-player 
+alert(user);
 document.getElementById(n).innerHTML =user;
 value[n] = 0;
 check(); 
