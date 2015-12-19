@@ -22,6 +22,7 @@ window.document.location.href = "https://cdn.rawgit.com/Santhodev/tic_tac_toe/ma
 
 //selecting your symbol
 function symbol(n) {
+	alert("inside symbol");
 if (n==1) {
 user = "O";
 com = "X";
