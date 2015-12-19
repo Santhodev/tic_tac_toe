@@ -32,6 +32,7 @@ else {
 user = "X";
 com = "O";
 user_2 = "O";
+alert(user);
 }
 }
 
