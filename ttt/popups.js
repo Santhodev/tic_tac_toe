@@ -26,6 +26,7 @@ if (n==1) {
 user = "O";
 com = "X";
 user_2 = "X";
+alert(user);
 }
 else {
 user = "X";
