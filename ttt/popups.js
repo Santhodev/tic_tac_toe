@@ -38,7 +38,8 @@ user_2 = "O";
 function process(n) {
 	alert(user);
 player_2 = sessionStorage.getItem('player_2');
-if (exit==0 && user && value[n]==5 && player_2==0) { //1-player 
+//1-player
+if (exit==0 && user && value[n]==5 && player_2==0) { 
 document.getElementById(n).innerHTML =user;
 value[n] = 0;
 check(); 
@@ -47,7 +48,8 @@ if (exit == 0) put();
 draw_check();
 setTimeout("finish_1()",4500);
 }
-else if (exit==0 && user && value[n]==5 && player_2==1){ //2-player
+//2-player
+else if (exit==0 && user && value[n]==5 && player_2==1){
 if (val%2==0){
 document.getElementById(n).innerHTML = user;
 value[n] = 0;
