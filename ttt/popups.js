@@ -13,7 +13,6 @@ function OX(n) {
 if (n ==1) {
 sessionStorage.setItem('player_2','0');
 window.document.location.href = "https://cdn.rawgit.com/Santhodev/tic_tac_toe/master/ttt/radio.html";
-alert("hi");
 }
 else {
 sessionStorage.setItem('player_2','1');
@@ -23,24 +22,20 @@ window.document.location.href = "https://cdn.rawgit.com/Santhodev/tic_tac_toe/ma
 
 //selecting your symbol
 function symbol(n) {
-	alert("inside symbol");
 if (n==1) {
 user = "O";
 com = "X";
 user_2 = "X";
-alert(user);
 }
 else {
 user = "X";
 com = "O";
 user_2 = "O";
-alert(user);
 }
 }
 
 //actual game
 function process(n) {
-	alert(user);
 player_2 = sessionStorage.getItem('player_2');
 //1-player
 if (exit==0 && user && value[n]==5 && player_2==0) { 
